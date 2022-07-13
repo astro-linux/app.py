@@ -1,0 +1,13 @@
+  name: sample-golang
+  services: 
+  - name: local-ex
+    image:    
+      registry_type: DOCR
+      repository: app-test 
+      tag: "xxxxx"
+    instance_size_slug: basic-xxs
+    instance_count: 1
+    http_port: 81
+    routes: 
+    - path: /
+  region: fra1
