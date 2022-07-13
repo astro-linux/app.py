@@ -56,6 +56,6 @@ jobs:
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       
     - name: deply app 
-      run: sed -i "s/xxxxx/$(echo $GITHUB_SHA | head -c7)/g" && doctl apps create --spec spec.yaml 
+      run: sed -i "s/xxxxx/$(echo $GITHUB_SHA | head -c7)/g" spec.yaml && doctl apps create --spec spec.yaml 
 
    
